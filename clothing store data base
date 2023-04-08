@@ -1,0 +1,13 @@
+- created a clothing store data base -
+CREATE TABLE clothing (id integer primary key, name TEXT, quantity INTEGER, price INTEGER, color TEXT);
+
+INSERT INTO clothing VALUES (1, "shirt", 5, 24, "black");
+INSERT INTO clothing values (2, "pants", 10, 30, "gray");
+INSERT INTO clothing values (3, "jeans", 15, 44, "blue");
+INSERT INTO clothing values (4, "skirts", 9, 32, "plaid");
+INSERT INTO clothing values (5, "hoodie", 5, 42, "gray");
+
+- organized table by price $ to $$$
+SELECT * FROM clothing WHERE price ORDER BY price asc;
+- got the sum price for each color 
+SELECT sum (price) FROM clothing group by color;
